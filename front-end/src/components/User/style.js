@@ -9,7 +9,7 @@ export const Content = styled.div`
     height:46px;
 
     img {
-        width:45px;
+        width:38px;
         border-radius: 50%;
         transition:0.4s;
         padding: 10px;
