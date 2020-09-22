@@ -8,6 +8,7 @@ export default function Header (props) {
         <>
         <Content>
             <Logo></Logo>
+            
             <User nome="Yan Vancelis"></User>
         </Content>
             

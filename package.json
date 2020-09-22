@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yanvancelis/mydespesas/issues"
   },
-  "homepage": "https://github.com/yanvancelis/mydespesas#readme"
+  "homepage": "https://github.com/yanvancelis/mydespesas#readme",
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
+  }
 }
