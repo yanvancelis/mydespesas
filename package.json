@@ -1,0 +1,22 @@
+{
+  "name": "mydespesas",
+  "version": "1.0.0",
+  "description": "Sistema de Gerenciamento de Despesas que estarei desenvolvendo para a disciplina de Desenvolvimento de Software para Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanvancelis/mydespesas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanvancelis/mydespesas/issues"
+  },
+  "homepage": "https://github.com/yanvancelis/mydespesas#readme",
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
+  }
+}
