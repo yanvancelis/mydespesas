@@ -9,9 +9,9 @@ import RowContent from '../../components/RowContent'
 export default function Index (props) {
     return (
         <>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
             
             <SuperCard>
                         

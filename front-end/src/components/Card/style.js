@@ -11,7 +11,7 @@ export const Content = styled.div`
     transition: 0.3s;
     border-radius:5px; 
     border: solid 1.5px #fff;
-
+    
     :hover {
         cursor:pointer;
         border: solid 1.5px #6BCB88;

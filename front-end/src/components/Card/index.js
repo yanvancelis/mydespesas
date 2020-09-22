@@ -7,7 +7,7 @@ export default function Card (props) {
             <Content>    
                 <Texts>
                     <Titulo>Seus rendimentos</Titulo>
-                    <BigTitulo negativo >R$450</BigTitulo>
+                    <BigTitulo positivo>R$450</BigTitulo>
                 </Texts>                            
             </Content>
         </>

@@ -9,14 +9,14 @@ export default function App () {
   return(
       <>
         <Router>
-          <Switch>
+          <Switch>    
             <Fragment>
               <Header></Header>
                 <Wrap>
                   <Menu></Menu>
-                    <Article>                    
+                  <Article>                    
                     <Routes />                   
-                    </Article>
+                  </Article>
                 </Wrap>                                                 
             </Fragment>
           </Switch>
