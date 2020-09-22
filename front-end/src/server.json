@@ -1,0 +1,21 @@
+{
+    "despesas": [
+        {"id": 1, "nome":"Aluguel AP", "categoria":"Casa", "recorrente": true},
+        {"id": 2, "nome":"Internet Brisanet", "categoria":"Casa", "recorrente": true},
+        {"id": 3, "nome":"Pizza Ifood", "categoria":"Almentação", "recorrente": false},
+        {"id": 4, "nome":"Água", "categoria":"Casa", "recorrente": true},
+        {"id": 5, "nome":"Energia", "categoria":"Casa", "recorrente": true}
+    ],
+
+    "rendimentos": [
+        {"id": 1, "nome":"Pagamento empresa", "tipo":"Salario", "recorrente": true},
+        {"id": 2, "nome":"Pagamento Victor", "tipo":"Freelancer", "recorrente": false},
+        {"id": 3, "nome":"Freela social media", "tipo":"Freelancer", "recorrente": false},
+        {"id": 4, "nome":"Bolsa UFC", "tipo":"Bolsa", "recorrente": true},
+        {"id": 5, "nome":"Pagamento Código Digital", "tipo":"Freelancer", "recorrente": false}
+    ],
+
+    "perfil": [ 
+        {"id": 1, "username": "yanvancelis", "email":"yanvancelis@gmail.com"}      
+    ]
+}
