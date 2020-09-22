@@ -3,3 +3,10 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #F8F9FB;
+}
+
