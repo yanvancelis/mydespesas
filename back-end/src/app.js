@@ -1,20 +1,25 @@
-import express from 'express'
-import routes from './routes'
+const express = require('express')
+const mongoose = require('mongoose')
+const routes = require('./routes')
+const Lancamentos = require('./models/Lancamento')
+const bodyParser = require('body-parser')
 
-class App {
-    constructor() {
-        this.server = express()
-        this.middlewares()
-        this.routes()
-    }
+const app = express()
 
-    middlewares() {
-        this.server.use(express.json())
-    }
+console.log(Lancamentos)
 
-    routes () {
-        this.server.use(routes)
-    }
-}
+mongoose.connect ('mongodb://localhost/mydespesas', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
 
-export default new App().server
+    }, (err, client) => {
+        if (err) return console.error(err)
+        console.log('Connected to Database')
+})
+
+app.use(bodyParser.json())
+app.use(routes)
+
+app.listen(3333, () => {
+    console.log("Rodando")
+})

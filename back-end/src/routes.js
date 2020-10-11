@@ -1,9 +1,16 @@
-import { Router } from 'express'
+const { Router } = require('express')
+const express = require('express')
+const LancamentosController = require('./controllers/lancamentosController')
+const UsuariosController = require('./controllers/usuariosController')
+const routes = express.Router()
 
-const routes = new Router()
+routes.get('/', LancamentosController.index)
+routes.post('/cadastro', LancamentosController.novoLancamento)
+routes.delete('/excluir', LancamentosController.excluirLancamento)
+routes.get('/rendimentos', LancamentosController.listarRendimentos)
+routes.get('/despesas', LancamentosController.listarDespesas)
 
-routes.get('/', (req, res) => {
-    return res.json({message: 'olaarrr'})
-})
+routes.post('/novousuario', UsuariosController.novoUsuario)
 
-export default routes
+
+module.exports = routes
