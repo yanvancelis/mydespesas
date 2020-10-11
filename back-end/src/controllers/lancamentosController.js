@@ -22,6 +22,7 @@ module.exports.novoLancamento = function (req, res) {
     promise.then(
         function(lancamento) {
             res.status(201).json(lancamento)
+            console.log(promise)
         }
 
     ).catch (

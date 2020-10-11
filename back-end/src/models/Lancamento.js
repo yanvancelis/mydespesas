@@ -6,7 +6,7 @@ module.exports = function () {
         categoria: { type: String, required: true },
         tipo: {  type: String, required: true},
         valor: {  type: String, required: true },
-        recorrente: {  type: String, required: true },
+        recorrente: {  type: Boolean, required: true },
         data: { type: String, required: true },
         id_user: {  type: String, required: true},
     })

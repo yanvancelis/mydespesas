@@ -3,8 +3,7 @@ const mongoose = require('mongoose')
 const routes = require('./routes')
 const Lancamentos = require('./models/Lancamento')
 const bodyParser = require('body-parser')
-
-const app = express()
+const cors = require('cors')
 
 console.log(Lancamentos)
 
@@ -17,6 +16,9 @@ mongoose.connect ('mongodb://localhost/mydespesas', {
         console.log('Connected to Database')
 })
 
+const app = express()
+
+app.use(cors())
 app.use(bodyParser.json())
 app.use(routes)
 
