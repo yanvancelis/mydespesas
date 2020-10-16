@@ -38,9 +38,9 @@ export const Nome = styled.h4`
 
 export const DropMenu = styled.div`
     position: absolute;
-    top:100px;    
-    right:299px;
     display: flex;
+    top:12%;
+    right:25%;
     flex-direction: column;
     padding: 20px;
     width:110px;

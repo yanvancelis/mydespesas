@@ -34,15 +34,16 @@ export const BigTitulo = styled.h1`
     font-size:42px;
     font-weight:500;
 
-    ${props => props.positivo && css`
-        color: #6BCB88;
-    `}
-
-    ${props => props.despesas && css`
-        color: #1B8366;
-    `}
-
     ${props => props.negativo && css`
-        color: #E37D7D;
+        
+        color: #E37D7D;           
+        
     `}
+
+    ${props => props.positivo && css`
+        
+        color: #6BCB88;            
+        
+    `}
+
 `

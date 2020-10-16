@@ -8,7 +8,7 @@ const cors = require('cors')
 console.log(Lancamentos)
 
 
-mongoose.connect ('mongodb://localhost/mydespesas', {
+mongoose.connect ('mongodb://localhost/myydespesas', {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 

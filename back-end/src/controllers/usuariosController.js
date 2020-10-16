@@ -8,7 +8,7 @@ const { promise } = require('bcrypt/promises')
 module.exports.login = function (req, res) {
     function logar (user) {
         if (bcrypt.compareSync(req.body.senha, user.senha)) {            
-            const token = jwt.sign({userId: user._id}, 'secret')
+            const token = jwt.sign({userId: user._id}, 'secret')            
             res.status(200).json({token: token, nome: user.nome, email: user.email})
         } else {
             falhar()
@@ -21,7 +21,7 @@ module.exports.login = function (req, res) {
     Usuario.findOne({email: req.body.email}).exec().then(logar).catch(falhar)
 }
 
-module.exports.listarUsuarios = function (req, res) {
+module.exports.listarUsuarios = async function (req, res) {
     const parametro = req.json
     console.log(req.json)
     const promise = Usuario.find(parametro).exec()
@@ -37,13 +37,16 @@ module.exports.listarUsuarios = function (req, res) {
         }
     )
 }
-module.exports.perfil = function (req, res) {
-    const perfil = req.params.id
-    const promise = Usuario.find({_id:perfil})
+module.exports.perfil = async function (req, res) {
+    const token = req.headers.authorization
+    const id = jwt.decode(token).userId
+    console.log(id)    
+    const promise = Usuario.find({_id:id})
     
     promise.then(
         function (promise) {
-            res.status(200).json(promise)
+            res.status(200).json({nome: promise[0].nome, email: promise[0].email})
+            console.log(promise)
         }
     ).catch(
         function(erro) {
@@ -52,7 +55,7 @@ module.exports.perfil = function (req, res) {
     )
 }
 
-module.exports.novoUsuario = function (req, res) {
+module.exports.novoUsuario = async function (req, res) {
     const novoUser = {
         nome: req.body.nome,
         senha: bcrypt.hashSync(req.body.senha, 10), 
@@ -74,7 +77,7 @@ module.exports.novoUsuario = function (req, res) {
     )
 }
 
-module.exports.tokenCheck = function (req, res, next) {  
+module.exports.tokenCheck = async function (req, res, next) {  
     const token = req.query.token;
     jwt.verify(token, 'secret', function(err, decoded) {
         if (err) {
@@ -84,7 +87,7 @@ module.exports.tokenCheck = function (req, res, next) {
     })
 }
 
-module.exports.userDelete = function(req, res) {
+module.exports.userDelete = async function(req, res) {
     const promise = Usuario.remove({_id:req.params.id}).exec()    
     promise.then(
         function (user) {
@@ -96,6 +99,6 @@ module.exports.userDelete = function(req, res) {
     )
 }
 
-module.exports.atualizarPerfil = function(req, res) {
+module.exports.atualizarPerfil = async function(req, res) {
 
 }

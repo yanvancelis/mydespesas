@@ -21,6 +21,7 @@ export const Content = styled.div`
         font-size:18px;
         font-weight:600;  
         margin-right:40px;
+        width:60px;
     }
     span {
         color:#5D6361;
@@ -39,4 +40,13 @@ export const Content = styled.div`
             color: #6BCB88;            
         }
     `}
+`
+
+export const Categoria = styled.span`
+        width:120px;
+        margin-right:5px;
+        color:#5D6361;
+        font-size: 15px;
+        font-weight:500;
+    }
 `

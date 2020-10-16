@@ -13,3 +13,11 @@ body {
 a {
     text-decoration: none;
 }
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: nonel
+}
